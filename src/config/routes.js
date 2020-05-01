@@ -7,7 +7,7 @@ import Home from '../components/Home';
 export default (props) => (
     <Switch>
         <Route>
-            <Home/>
+            <Home exact path="/" component={ Home }/>
         </Route>
     </Switch>
 )

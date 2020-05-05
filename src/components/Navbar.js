@@ -46,10 +46,10 @@ class Navbar extends Component {
                                 :
                                 <>
                                 <li className="nav-item">
-                                    <button className="nav-link btn" onClick={this.openSignup}>Signup</button>
+                                    <button className="nav-link btn" onClick={this.openSignup}>Sign up</button>
                                 </li>
                                 <li className="nav-item">
-                                    <button className="nav-link btn" onClick={this.openLogin}>Login</button>
+                                    <button className="nav-link btn" onClick={this.openLogin}>Log in</button>
                                 </li>
                                 </>
                                 }
@@ -58,7 +58,26 @@ class Navbar extends Component {
                     </div>
                 </nav>  
                 <Modal show={signup} onHide={this.closeSignup}>
-                    
+                    <Modal.Body>
+                        <Signup history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeSignup}/>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <p>Already floating with us?</p>
+                        <button className="btn text-info" onClick={this.signupToLogin}>
+                            <u>Log in</u>
+                        </button>
+                    </Modal.Footer>
+                </Modal>
+                <Modal show={login} onHide={this.closeLogin}>
+                    <Modal.Body>
+                        <Login history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeLogin}/>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <p>Need to sign up?</p>
+                        <button className="btn text-info" onClick={this.loginToSignup}>
+                            <u>Sign up</u>
+                        </button>
+                    </Modal.Footer>
                 </Modal>
             </>
         );

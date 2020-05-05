@@ -33,7 +33,7 @@ class App extends Component {
     }
 
     async fetchFloatieList() {
-        let res = await.FloatieModel.all();
+        let res = await FloatieModel.all();
         this.setState({
             floatieList: res.data
         })

@@ -8,10 +8,11 @@ class Navbar extends Component {
     state = {
         signup: false,
         login: false,
-        currentUser: this.props.currentUser
+        currentUser: this.props.currentUser,
+        floatieList: this.props.floatList
     }
 
-    closeSignup = () => this.setState({signup: flase});
+    closeSignup = () => this.setState({signup: false});
     openSignup = () => this.setState({signup: true});
     closeLogin = () => this.setState({login: false});
     openLogin = () => this.setState({login: true});
@@ -26,10 +27,10 @@ class Navbar extends Component {
                 <nav className="navbar navbar-expand-md bg-light">
                     <div className="container">
                         <Link className="navbar-brand" to="/">Russian River Floaties</Link>
-                        <button>
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggle-icon"></span>
                         </button>
-                        <div className="collapse navbar-collapse" id="navClose">
+                        <div className="collapse navbar-collapse" id="navbarsExample04">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/floaties">Floaties</NavLink>
@@ -59,7 +60,7 @@ class Navbar extends Component {
                 </nav>  
                 <Modal show={signup} onHide={this.closeSignup}>
                     <Modal.Body>
-                        <Signup history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeSignup}/>
+                        <Signup history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeSignup} floatieList={this.props.floatieList}/>
                     </Modal.Body>
                     <Modal.Footer>
                         <p>Already floating with us?</p>

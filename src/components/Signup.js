@@ -24,15 +24,27 @@ class Signup extends Component {
                     name: "",
                     email: "",
                     password: "",
-                    password2: ""
+                    password2: "",
+                    favFloatie: {}
                 })
+                console.log(res.data.data)
                 this.props.setCurrentUser(res.data.data)
-                this.props.history,push("/account")
+                this.props.history.push("/account")
             })
             .catch(err => console.log(err))
     }
 
+
     render() {
+        let floatieOptions = this.props.floatieList.map((floatie, index) => {
+            return (
+                <option
+                    key={index}
+                    value={floatie}>
+                        {floatie.name}
+                </option>
+            )
+        })
         return (
             <div className="container mt-4">
                 <div className="row">
@@ -82,6 +94,18 @@ class Signup extends Component {
                                     name="password2"
                                     value={this.state.password2}
                                 />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="favFloatie">Go to Floatie!</label>
+                                <select
+                                    onChange={this.handleChange}
+                                    className="form control form-control-lg"
+                                    id="favFloatie"
+                                    name="favFloatie"
+                                    value={this.state.favFloatie}
+                                >
+                                    {floatieOptions}
+                                </select>
                             </div>
                             <button className="btn btn-primary pull-left" type="submit" onClick={this.props.onClick}>Sign up</button>
                         </form>

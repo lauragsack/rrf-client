@@ -48,14 +48,30 @@ class FloatieDetail extends Component {
             {`Type: ${this.state.floatie.type}`}
           </Card.Text>
           <Card.Text>
-            {`Deliverable: ${this.state.floatie.deliverable}`}
+          {this.state.floatie.deliverable === true ?
+            <>
+              Can be delivered: <i className="fas fa-check"></i>
+            </>
+            :
+            <>
+              Can be delivered: <i className="fas fa-times"></i> 
+            </>
+          }
+          </Card.Text>     
+          <Card.Text>
+            {`Good for: ${this.state.floatie.goodFor}`}
           </Card.Text>
           <Card.Text>
-            {`Good for ${this.state.floatie.goodFor} people`}
-          </Card.Text>
-          <Card.Text>
-            {this.state.floatie.dogFriendly}
-          </Card.Text>
+          {this.state.floatie.dogFriendly === true ?
+            <>
+              Dog Friendly: <i className="fas fa-paw"></i>
+            </>
+            :
+            <>
+              DogFriendly: <i className="fas fa-times"></i> 
+            </>
+          }
+          </Card.Text>  
           <Card.Text>
             {`Price per day: $${this.state.floatie.price}`}
           </Card.Text>

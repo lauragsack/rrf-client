@@ -17,6 +17,7 @@ class Login extends Component {
         event.preventDefault()
         UserModel.login(this.state)
         .then(res => {
+            console.log(res.data)
             this.props.setCurrentUser(res.data)
             this.props.history.push("/account")
         })
@@ -28,7 +29,7 @@ class Login extends Component {
             <div className="container mt-4">
                 <div className="row">
                     <div className="cold-md-4 offset-md-3">
-                        <h4 className="mb-3">Sign up</h4>
+                        <h4 className="mb-3">Log in</h4>
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>

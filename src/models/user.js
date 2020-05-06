@@ -16,7 +16,12 @@ export default class UserModel {
     }
 
     static logout = () => {
-        let request = axios.delete(`${REACT_APP_API_URL}/logout`, { withCredentials: true});
+        let request = axios.delete(`${REACT_APP_API_URL}/logout`, {withCredentials: true});
+        return request;
+    }
+
+    static verify = () => {
+        let request = axios.get(`${REACT_APP_API_URL}/verify`, {withCredentials: true});
         return request;
     }
 }

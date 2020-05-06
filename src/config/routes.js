@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 //import components
 import Home from '../components/Home';
-import Account from '../components/Account';
+import Reservations from '../components/Reservations';
 
 
 export default (props) => (
@@ -10,8 +10,8 @@ export default (props) => (
         <Route exact path="/" >
             <Home floatieList={props.floatieList} component={ Home }/>
         </Route>
-        <Route path="/account">
-            <Account
+        <Route path="/Reservations">
+            <Reservations
                 currentUser={props.currentUser}
                 setCurrentUser={props.setCurrentUser}
             />

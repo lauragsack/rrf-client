@@ -22,7 +22,15 @@ class NavbarNew extends Component {
     return (
       <>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">Russian River Floaties</Navbar.Brand>
+          <Navbar.Brand href="/">
+          <img
+          src="https://i.imgur.com/RcAwEzL.png"
+          width="150"
+          height="150"
+          className="d-inline-block align-top"
+          alt="Russian River Floaties logo"
+          />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

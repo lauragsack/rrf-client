@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, CardColumns } from 'react-bootstrap';
-import BeachMap from './BeachMap';
+import BeachContainer from '../containers/BeachContainer';
 
 const Home = () => {
     return (
     <>
+        <BeachContainer/>
     </>
     // <CardColumns>
     //     <Card>

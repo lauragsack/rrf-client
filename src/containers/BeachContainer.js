@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BeachModel from '../models/beach';
 import BeachDetail from '../components/BeachDetail';
+import BeachMap from '../components/BeachMap';
 
 class BeachContainer extends Component {
   state = {
@@ -13,10 +14,10 @@ class BeachContainer extends Component {
 
   async fetchBeaches() {
     let res = await BeachModel.all();
+    console.log(res.data)
     this.setState({
       beaches: res.data
     })
-    console.log(beaches)
   }
 
   render() {
@@ -29,9 +30,11 @@ class BeachContainer extends Component {
       )
     })
     return (
-      <BeachMap/>
       <>
-        {beaches}
+        <BeachMap/>
+        <div className="beaches">
+          {beaches}
+        </div>
       </>
     );
   }

@@ -31,7 +31,7 @@ class App extends Component {
             .catch(err => console.log(err))
     }
 
-    async fetchFloatieList() {
+    async fetchFloaties() {
         let res = await FloatieModel.all();
         this.setState({
             floatieList: res.data
@@ -39,7 +39,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.fetchFloatieList();
+        this.fetchFloaties();
     }
 
     render() {

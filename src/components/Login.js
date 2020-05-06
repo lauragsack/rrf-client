@@ -19,7 +19,7 @@ class Login extends Component {
         .then(res => {
             console.log(res.data)
             this.props.setCurrentUser(res.data)
-            this.props.history.push("/account")
+            this.props.history.push("/reservations")
         })
         .catch(err => console.log(err))
     }

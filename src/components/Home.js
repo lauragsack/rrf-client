@@ -4,7 +4,8 @@ import BeachMap from './BeachMap';
 
 const Home = () => {
     return (
-    <BeachMap/>
+    <>
+    </>
     // <CardColumns>
     //     <Card>
     //         <Card.Img variant="top" src="holder.js/100px160" />

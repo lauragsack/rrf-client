@@ -29,7 +29,7 @@ class Signup extends Component {
                 })
                 console.log(res.data.user);
                 this.props.setCurrentUser(res.data.user)
-                this.props.history.push("/account")
+                this.props.history.push("/reservations")
             })
             .catch(err => console.log(err))
     }

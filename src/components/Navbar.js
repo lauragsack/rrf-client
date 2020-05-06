@@ -37,7 +37,7 @@ class NavbarNew extends Component {
               <Nav.Link href="/floaties">Floaties</Nav.Link>
               {this.props.currentUser?
                 <>
-                  <Nav.Link href="/account">Reservations</Nav.Link>
+                  <Nav.Link href="/reservations">Reservations</Nav.Link>
                   <Nav.Link href="/logout" onClick={this.props.logout}>Log out</Nav.Link>
                 </>
                 :

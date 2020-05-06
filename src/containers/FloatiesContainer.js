@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardDeck from 'react-bootstrap/CardDeck'; 
+import { CardDeck, Button } from 'react-bootstrap/'; 
 import Floatie from '../components/Floatie';
 
 class FloatiesContainer extends Component {
@@ -18,9 +18,24 @@ class FloatiesContainer extends Component {
     })
 
     return (
-      <CardDeck>
-        {floaties}
-      </CardDeck>
+      <>
+      {this.props.currentUser?
+        <>
+        <Button href="/reservations" variant="primary" size="lg" block>
+          Make a Reservation
+        </Button>
+        <CardDeck>
+          {floaties}
+        </CardDeck>
+        </>
+        :
+        <>
+        <CardDeck>
+          {floaties}
+        </CardDeck>
+        </>
+      }
+      </>
     );
   }
 }

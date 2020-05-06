@@ -5,6 +5,7 @@ import Home from '../components/Home';
 import Reservations from '../components/Reservations';
 import FloatieDetail from '../components/FloatieDetail';
 import FloatiesContainer from '../containers/FloatiesContainer';
+import ReservationContainer from '../containers/ReservationContainer';
 
 
 export default (props) => (
@@ -12,7 +13,7 @@ export default (props) => (
         <Route exact path="/">
             <Home floatieList={props.floatieList}/>
         </Route>
-        <Route path="/reservations">
+        <Route path="/reservations/user">
             <Reservations
                 currentUser={props.currentUser}
             />
@@ -24,5 +25,11 @@ export default (props) => (
             />
         </Route>
         <Route path="/floaties/:name" component={FloatieDetail}/>
+        <Route path="/reservations">
+            <ReservationContainer
+                currentUser={props.currentUser}
+                floatieList={props.floatieList}
+            />
+        </Route>
     </Switch>
 )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import 
+import CardDeck from 'react-bootstrap/CardDeck'; 
+import Floatie from '../components/Floatie';
 
 class FloatiesContainer extends Component {
   state = {
@@ -7,11 +8,19 @@ class FloatiesContainer extends Component {
   }
 
   render() {
+    let floaties = this.props.floatieList.map((floatie) => {
+      return (
+        <Floatie
+          key={floatie._id}
+          floatie={floatie}
+        />
+      )
+    })
 
     return (
-      <div>
-        
-      </div>
+      <CardDeck>
+        {floaties}
+      </CardDeck>
     );
   }
 }

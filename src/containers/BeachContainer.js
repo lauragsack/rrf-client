@@ -14,7 +14,6 @@ class BeachContainer extends Component {
 
   async fetchBeaches() {
     let res = await BeachModel.all();
-    console.log(res.data)
     this.setState({
       beaches: res.data
     })

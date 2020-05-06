@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
-import Signup from './Signup';
-import Login from './Login';
+import Signup from '../Signup';
+import Login from '../Login';
 
 class Navbar extends Component {
     state = {

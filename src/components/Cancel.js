@@ -12,9 +12,9 @@ const Cancel = (props) => {
     </Modal.Body>
     <Modal.Footer>
         <Button id="stopBtn" variant="secondary" onClick={props.closeCancel}>
-            JK, float on <i class="far fa-hand-peace"></i>
+            JK, float on <i className="far fa-hand-peace"></i>
         </Button>
-        <Button id="cancelBtn" variant="secondary" onClick={props.cancelReservation}>
+        <Button id={props.reservation._id} variant="secondary" onClick={props.cancelReservation}>
             Yes, please cancel!
         </Button>
     </Modal.Footer>

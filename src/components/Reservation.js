@@ -8,14 +8,10 @@ class Reservation extends Component {
     cancel: false,
   }
 
-  async cancelReservation() {
-    let res = await ReservationModel.delete(this.props.reservation._id)
-    this.setState({
-      cancel: false
-    })
+  closeCancel = (e) => {
+    console.log(e)
+    this.setState({cancel: false});
   }
-
-  closeCancel = () => this.setState({cancel: false});
   openCancel = () => this.setState({cancel: true});
 
   render() {
@@ -26,13 +22,13 @@ class Reservation extends Component {
       <Card>
           <Dropdown className="float-right dropdown">
             <Dropdown.Toggle variant="light" id="dropdown-basic">
-              Manage Reservation
+              Manage
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item href={`/reservations/${this.props.reservation._id}`}>Edit</Dropdown.Item>
               <Dropdown.Item onClick={this.openCancel}>Cancel
-                <Modal show={cancel} onHide={this.closeCancel}>
-                  <Cancel cancelReservation={this.cancelReservation} reservation={this.props.reservation} closeCancel={this.closeCancel}/>
+                <Modal show={cancel} onHide={this.closeCancel} centered>
+                  <Cancel cancelReservation={this.props.cancelReservation} reservation={this.props.reservation} closeCancel={this.closeCancel}/>
                 </Modal>
               </Dropdown.Item>
             </Dropdown.Menu>

@@ -21,7 +21,7 @@ class FloatiesContainer extends Component {
       <>
       {this.props.currentUser?
         <>
-        <Button href="/reservations" variant="primary" size="lg" block>
+        <Button href="/reservations" variant="light" size="lg" block>
           Make a Reservation
         </Button>
         <CardDeck>

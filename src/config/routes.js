@@ -5,7 +5,8 @@ import Home from '../components/Home';
 import Reservations from '../components/Reservations';
 import FloatieDetail from '../components/FloatieDetail';
 import FloatiesContainer from '../containers/FloatiesContainer';
-import ReservationContainer from '../containers/ReservationContainer';
+import ReservationForm from '../components/ReservationForm';
+import ReservationEdit from '../components/ReservationEdit';
 
 
 export default (props) => (
@@ -18,6 +19,16 @@ export default (props) => (
                 currentUser={props.currentUser}
             />
         </Route>
+        <Route path="/reservations">
+            <ReservationForm
+                currentUser={props.currentUser}
+            />
+        </Route>
+        <Route path="/reservations/:id">
+            <ReservationEdit
+                currentUser={props.currentUser}
+            />
+        </Route>
         <Route exact path="/floaties">
             <FloatiesContainer
                 currentUser={props.currentUser}
@@ -25,11 +36,5 @@ export default (props) => (
             />
         </Route>
         <Route path="/floaties/:name" component={FloatieDetail}/>
-        <Route path="/reservations">
-            <ReservationContainer
-                currentUser={props.currentUser}
-                floatieList={props.floatieList}
-            />
-        </Route>
     </Switch>
 )

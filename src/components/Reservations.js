@@ -17,7 +17,6 @@ class Reservations extends Component {
     this.setState({
       reservations: res.data
     })
-    console.log(res.data)
   }
 
   render() {
@@ -31,10 +30,10 @@ class Reservations extends Component {
     })
     return (
       <>
-        <h1>Your Reservations</h1>
-        <Button href="/reservations" variant="primary" size="lg" block>
+        <Button href="/reservations" variant="light" size="lg" block>
           Make a Reservation
         </Button>
+        <h1>Your Reservations</h1>
         <CardColumns className="reservations">
           {reservations}
         </CardColumns>

@@ -7,7 +7,6 @@ class NavbarNew extends Component {
   state = {
     signup: false,
     login: false,
-    currentUser: this.props.currentUser,
 }
 
   closeSignup = () => this.setState({signup: false});
@@ -21,7 +20,7 @@ class NavbarNew extends Component {
     const {signup, login} = this.state;
     return (
       <>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="info" expand="lg">
           <Navbar.Brand href="/">
           <img
           src="https://i.imgur.com/RcAwEzL.png"
@@ -37,7 +36,7 @@ class NavbarNew extends Component {
               <Nav.Link href="/floaties">Floaties</Nav.Link>
               {this.props.currentUser?
                 <>
-                  <Nav.Link href="/reservations">Reservations</Nav.Link>
+                  <Nav.Link href="/reservations/user">Reservations</Nav.Link>
                   <Nav.Link href="/logout" onClick={this.props.logout}>Log out</Nav.Link>
                 </>
                 :

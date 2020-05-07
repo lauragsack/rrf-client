@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import BeachModel from '../models/beach';
 import BeachDetail from '../components/BeachDetail';
 import BeachMap from '../components/BeachMap';
@@ -14,7 +15,6 @@ class BeachContainer extends Component {
 
   async fetchBeaches() {
     let res = await BeachModel.all();
-    console.log(res.data)
     this.setState({
       beaches: res.data
     })
@@ -30,12 +30,12 @@ class BeachContainer extends Component {
       )
     })
     return (
-      <>
+      <Container>
         <BeachMap/>
         <div className="beaches">
           {beaches}
         </div>
-      </>
+      </Container>
     );
   }
 }

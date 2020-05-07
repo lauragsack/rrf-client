@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import 
+import { CardDeck, Button } from 'react-bootstrap/'; 
+import Floatie from '../components/Floatie';
 
 class FloatiesContainer extends Component {
   state = {
@@ -7,11 +8,34 @@ class FloatiesContainer extends Component {
   }
 
   render() {
+    let floaties = this.props.floatieList.map((floatie) => {
+      return (
+        <Floatie
+          key={floatie._id}
+          floatie={floatie}
+        />
+      )
+    })
 
     return (
-      <div>
-        
-      </div>
+      <>
+      {this.props.currentUser?
+        <>
+        <Button href="/reservations" variant="light" size="lg" block>
+          Make a Reservation
+        </Button>
+        <CardDeck>
+          {floaties}
+        </CardDeck>
+        </>
+        :
+        <>
+        <CardDeck>
+          {floaties}
+        </CardDeck>
+        </>
+      }
+      </>
     );
   }
 }

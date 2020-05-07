@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AccountContainer extends Component {
+class ReservationEdit extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class AccountContainer extends Component {
   }
 }
 
-export default AccountContainer;
+export default ReservationEdit;

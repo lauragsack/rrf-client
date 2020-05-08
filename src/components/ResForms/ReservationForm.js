@@ -31,13 +31,11 @@ class ReservationForm extends Component {
   }
 
   handleFloatieChange = (event) => {
-    let floatie = {floatie: event.target.id, quantity: event.target.value}
-    console.log(floatie)
+    let floatie = {floatie: event.target.id, price:event.target.className, quantity: event.target.value}
     let floaties = [floatie, ...this.state.floaties];
     this.setState({
       floaties: floaties
     })
-    // this.getTotalPrice();
   }
 
   getDays(startDate, endDate) {
@@ -49,27 +47,33 @@ class ReservationForm extends Component {
       start.setDate(start.getDate() + 1)
     }
     return days
-    console.log(days)
   }
 
   getTotalPrice() {
     const days = this.getDays();
+    console.log(days)
     let subTotal;
     let totalPrice = 0;
     this.state.floaties.forEach(floatie => {
-      subTotal = floatie.floatie.price * floatie.quantity
+      subTotal = parseInt(floatie.price) * parseInt(floatie.quantity)
+      console.log(subTotal)
       totalPrice += (subTotal * days)
+      console.log(totalPrice)
     })
+    console.log("getting total price")
     this.setState({
       totalPrice: totalPrice
     })
+    console.log(this.state.totalPrice)
   }
 
   handleSubmit = (event) => {
+    this.getTotalPrice();
     event.preventDefault()
     ReservationModel.create(this.state)
         .then(res => {
             this.setState({
+              user: "",
               startDate: "",
               endDate: "",
               totalPrice: "",

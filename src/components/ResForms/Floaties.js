@@ -28,7 +28,7 @@ class Floaties extends Component {
             placeholder="0"
             onChange={this.props.handleFloatieChange}
           /> */}
-          <select onChange={this.props.handleFloatieChange} id={floatie._id}>
+          <select onChange={this.props.handleFloatieChange} id={floatie._id} className={floatie.price}>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>

@@ -5,8 +5,8 @@ import Home from '../components/Home';
 import Reservations from '../components/Reservations';
 import FloatieDetail from '../components/FloatieDetail';
 import FloatiesContainer from '../containers/FloatiesContainer';
-import ReservationForm from '../components/ReservationForm';
-import ReservationEdit from '../components/ReservationEdit';
+import ReservationForm from '../components/ResForms/ReservationForm';
+import ReservationEdit from '../components/ResForms/ReservationEdit';
 
 
 export default (props) => (
@@ -22,11 +22,13 @@ export default (props) => (
         <Route path="/reservations">
             <ReservationForm
                 currentUser={props.currentUser}
+                floatieList={props.floatieList}
             />
         </Route>
         <Route path="/reservations/:id">
             <ReservationEdit
                 currentUser={props.currentUser}
+                floatieList={props.floatieList}
             />
         </Route>
         <Route exact path="/floaties">

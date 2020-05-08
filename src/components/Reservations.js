@@ -5,7 +5,7 @@ import Reservation from './Reservation';
 
 class Reservations extends Component {
   state = {
-    reservations: []
+    reservations: [],
   }
 
   componentDidMount() {
@@ -14,9 +14,19 @@ class Reservations extends Component {
 
   async fetchReservations() {
     let res = await ReservationModel.user(this.props.currentUser)
+    console.log(res.data)
     this.setState({
       reservations: res.data
     })
+  }
+
+  cancelReservation = async(event) => {
+    console.log(event.target.id)
+    let res = await ReservationModel.delete(event.target.id)
+    this.setState({
+      cancel: false
+    })
+    this.fetchReservations();
   }
 
   render() {
@@ -25,19 +35,19 @@ class Reservations extends Component {
         <Reservation
           key={reservation._id}
           reservation={reservation}
+          cancelReservation={this.cancelReservation}
         />
       )
     })
     return (
-      <>
-        <Button href="/reservations" variant="light" size="lg" block>
+      <div className="resList">
+        <Button className="make-res" href="/reservations" variant="light" size="lg" block>
           Make a Reservation
         </Button>
-        <h1>Your Reservations</h1>
-        <CardColumns className="reservations">
+        <CardColumns>
           {reservations}
         </CardColumns>
-      </>
+      </div>
     );
   }
 }

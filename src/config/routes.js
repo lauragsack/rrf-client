@@ -22,6 +22,7 @@ export default (props) => (
         <Route path="/reservations">
             <ReservationForm
                 currentUser={props.currentUser}
+                floatieList={props.floatieList}
             />
         </Route>
         <Route path="/reservations/:id">

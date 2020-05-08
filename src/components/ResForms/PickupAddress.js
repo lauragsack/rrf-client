@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BeachModel from '../../models/beach';
-import { Media} from 'react-bootstrap'
+import Media from 'react-bootstrap/Media'
 
 class PickupAddress extends Component {
   state = {
@@ -20,7 +20,6 @@ class PickupAddress extends Component {
   }
 
   render() {
-    console.log(this.props)
     let beaches = this.state.beaches.map((beach) => {
       return (
       <div>

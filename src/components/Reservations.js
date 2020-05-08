@@ -41,11 +41,10 @@ class Reservations extends Component {
     })
     return (
       <>
-        <Button href="/reservations" variant="light" size="lg" block>
+        <Button className="make-res" href="/reservations" variant="light" size="lg" block>
           Make a Reservation
         </Button>
-        <h1>Your Reservations</h1>
-        <CardColumns className="reservations">
+        <CardColumns>
           {reservations}
         </CardColumns>
       </>

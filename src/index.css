@@ -11,16 +11,24 @@ body {
   color: black;
 }
 
+.nav-link {
+  font-family: 'Gidugu', sans-serif;
+  font-size: 30px;
+}
 
-.mapTitle {
+.homeTitle {
   font-family: 'Gidugu', sans-serif;
   font-size: 50px;
+}
+
+.homeBody {
+  background-image: url("");
 }
 
 .footer {
   background-color: pink;
   font-family: 'Gidugu', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px 5px;
   text-align: right;
 }
@@ -39,10 +47,6 @@ body {
   font-size: 30px;
 }
 
-Button {
-  font-family: 'Gidugu', sans-serif;
-}
-
 .make-res {
   font-family: 'Roboto Slab', serif;
 }
@@ -55,7 +59,6 @@ Button {
   width: 25rem;
   margin: 1rem;
   font-family: 'Roboto Slab', serif;
-  
 }
 
 .fl-card-container {
@@ -72,3 +75,16 @@ Button {
   object-fit: cover;
 }
 
+.floatieBody {
+  background-image: url("");
+  background-size: cover;
+}
+
+.reservationCard {
+  font-family: 'Roboto Slab', serif;
+}
+
+#dropdown-basic {
+  font-family: 'Gidugu', sans-serif;
+  font-size: 25px;
+}

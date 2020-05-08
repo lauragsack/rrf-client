@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import ReservationModel from '../../models/reservation';
 import ReservationType from './ReservationType';
+import Floaties from './Floaties';
 import Footer from '../Footer';
 
 class ReservationForm extends Component {
@@ -101,10 +102,19 @@ class ReservationForm extends Component {
 
       <Form.Group>
         <ReservationType 
-        handleChange={this.handleChange} 
-        handleBeachChange={this.handleBeachChange}
-        pickupAddress={this.pickupAddress} 
-        deliveryAddress={this.deliveryAddress} type={this.state.type}
+          handleChange={this.handleChange} 
+          handleBeachChange={this.handleBeachChange}
+          pickupAddress={this.pickupAddress} 
+          deliveryAddress={this.deliveryAddress} 
+          type={this.state.type}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Floaties
+          floatieList={this.props.floatieList}
+          handleChange={this.handleChange} 
+          floaties={this.state.floaties}
         />
       </Form.Group>
 

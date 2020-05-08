@@ -150,7 +150,7 @@ class ReservationForm extends Component {
         />
       </Form.Group>
 
-      <Button variant="secondary" type="submit">
+      <Button variant="secondary" type="submit" href="/reservations/user">
         Submit
       </Button>
     </Form>

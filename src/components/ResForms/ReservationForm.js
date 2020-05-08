@@ -34,7 +34,7 @@ class ReservationForm extends Component {
     let floatie = {floatie: event.target.id, price:event.target.className, quantity: event.target.value}
     let floaties = [floatie, ...this.state.floaties];
     this.setState({
-      floaties: floaties
+      floaties: floaties,
     })
   }
 
@@ -53,22 +53,18 @@ class ReservationForm extends Component {
     const days = this.getDays();
     console.log(days)
     let subTotal;
-    let totalPrice = 0;
+    let resPrice = 0;
     this.state.floaties.forEach(floatie => {
       subTotal = parseInt(floatie.price) * parseInt(floatie.quantity)
-      console.log(subTotal)
-      totalPrice += (subTotal * days)
-      console.log(totalPrice)
+      resPrice += (subTotal * days)
+      console.log(resPrice)
+      this.setState({
+        totalPrice: resPrice
+      })
     })
-    console.log("getting total price")
-    this.setState({
-      totalPrice: totalPrice
-    })
-    console.log(this.state.totalPrice)
   }
 
   handleSubmit = (event) => {
-    this.getTotalPrice();
     event.preventDefault()
     ReservationModel.create(this.state)
         .then(res => {
@@ -147,10 +143,12 @@ class ReservationForm extends Component {
           floatieList={this.props.floatieList}
           handleFloatieChange={this.handleFloatieChange} 
           floaties={this.state.floaties}
+          getTotalPrice={this.getTotalPrice}
         />
       </Form.Group>
 
-      <Button variant="secondary" type="submit" href="/reservations/user">
+      <Button variant="secondary" type="submit">
+      {/* href="/reservations/user" */}
         Submit
       </Button>
     </Form>

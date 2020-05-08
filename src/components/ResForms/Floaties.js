@@ -5,6 +5,10 @@ class Floaties extends Component {
     floaties: this.props.floaties,
   }
 
+  componentDidUpdate() {
+    this.props.getTotalPrice()
+  }
+
   render() {
     let floatieOptions = this.props.floatieList.map((floatie) => {
       return (

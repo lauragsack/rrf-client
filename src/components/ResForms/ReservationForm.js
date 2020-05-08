@@ -21,22 +21,45 @@ class ReservationForm extends Component {
     this.setState({
         [event.target.name]: event.target.value
     })
-    // this.getTotalPrice();
   }
 
   handleBeachChange = (event) => {
+    console.log(event) 
     this.setState({
       pickupAddress: event.target.value
     })
   }
 
-  // getTotalPrice() {
-  //   let totalPrice;
-  //   // calculate total
-  //   this.setState({
-  //     totalPrice: totalPrice
-  //   })
-  // }
+  handleFloatieChange = (event) => {
+    console.log(event) // not logging event
+    this.state.floaties.push({floatie: event.target.id, quantity: event.target.value});
+    this.getTotalPrice();
+  }
+
+  getDays(startDate, endDate) {
+    const start = new Date(this.state.startDate);
+    const end = new Date(this.state.endDate)
+    let days = 0;
+    while (end >= start) {
+      days ++ 
+      start.setDate(start.getDate() + 1)
+    }
+    return days
+    console.log(days)
+  }
+
+  getTotalPrice() {
+    const days = this.getDays();
+    let subTotal;
+    let totalPrice = 0;
+    this.state.floaties.forEach(floatie => {
+      subTotal = floatie.floatie.price * floatie.quantity
+      totalPrice += (subTotal * days)
+    })
+    this.setState({
+      totalPrice: totalPrice
+    })
+  }
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -111,9 +134,10 @@ class ReservationForm extends Component {
       </Form.Group>
 
       <Form.Group>
+        <Form.Label>Floaties</Form.Label>
         <Floaties
           floatieList={this.props.floatieList}
-          handleChange={this.handleChange} 
+          handleChange={this.handleFloatieChange} 
           floaties={this.state.floaties}
         />
       </Form.Group>
@@ -122,7 +146,7 @@ class ReservationForm extends Component {
         Submit
       </Button>
     </Form>
-    {/* <Footer/> */}
+    <Footer/>
     </>
     );
   }

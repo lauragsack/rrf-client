@@ -6,25 +6,32 @@ class Floaties extends Component {
     floaties: this.props.floaties,
   }
 
-  handleFloatieChange = (event) => {
-    this.setState({
 
-    })
-  }
+//   componentDidMount() {
+//    this.setState({
+//      floaties: this.props.floatieList.map((floatie) => {
+//       resFloatie = {
+//         floatie: floatie,
+//         quantity: 0
+//       }
+//     })
+//   })
+// }
 
   render() {
-    console.log(this.props)
-    let floatieList = this.props.floatieList.map((floatie) => {
+    let floatieOptions = this.props.floatieList.map((floatie) => {
       return (
         <div>
           <label>
             {floatie.name}
-          <input 
-            name={floatie.name}
-            type="number"
-            value={floatie._id}
-            onChange={this.props.handleFloatieChange}
-            />
+          <select onChange={this.props.handleFloatieChange}>
+            <option id={floatie._id} value="0">0</option>
+            <option id={floatie._id} value="1">1</option>
+            <option id={floatie._id} value="2">2</option>
+            <option id={floatie._id} value="3">3</option>
+            <option id={floatie._id} value="4">4</option>
+            <option id={floatie._id} value="5">5</option>
+          </select>
           <Media>
             <img
               width={160}
@@ -34,7 +41,7 @@ class Floaties extends Component {
               alt="river floatie"
             />
             <Media.Body>
-              <p>{floatie.price}</p>
+              <p>{`$${floatie.price} / day`}</p>
             </Media.Body>
           </Media>
           </label>
@@ -43,7 +50,7 @@ class Floaties extends Component {
     })
     return (
       <div>
-        
+        {floatieOptions}
       </div>
     );
   }

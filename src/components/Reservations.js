@@ -40,14 +40,14 @@ class Reservations extends Component {
       )
     })
     return (
-      <>
+      <div className="resList">
         <Button className="make-res" href="/reservations" variant="light" size="lg" block>
           Make a Reservation
         </Button>
         <CardColumns>
           {reservations}
         </CardColumns>
-      </>
+      </div>
     );
   }
 }

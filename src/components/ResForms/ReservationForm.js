@@ -31,9 +31,13 @@ class ReservationForm extends Component {
   }
 
   handleFloatieChange = (event) => {
-    console.log(event) // not logging event
-    this.state.floaties.push({floatie: event.target.id, quantity: event.target.value});
-    this.getTotalPrice();
+    let floatie = {floatie: event.target.id, quantity: event.target.value}
+    console.log(floatie)
+    let floaties = [floatie, ...this.state.floaties];
+    this.setState({
+      floaties: floaties
+    })
+    // this.getTotalPrice();
   }
 
   getDays(startDate, endDate) {
@@ -83,7 +87,7 @@ class ReservationForm extends Component {
   render() {
     return (
       <>
-      <Form className="resForm">
+      <Form className="resForm" onSubmit={this.handleSubmit}>
         <Form.Row>
           <Form.Group controlId="startDate">
             <Form.Label>Start Date</Form.Label>
@@ -137,7 +141,7 @@ class ReservationForm extends Component {
         <Form.Label>Floaties</Form.Label>
         <Floaties
           floatieList={this.props.floatieList}
-          handleChange={this.handleFloatieChange} 
+          handleFloatieChange={this.handleFloatieChange} 
           floaties={this.state.floaties}
         />
       </Form.Group>

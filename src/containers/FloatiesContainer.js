@@ -22,7 +22,7 @@ class FloatiesContainer extends Component {
       <>
       {this.props.currentUser?
         <>
-        <Button className="make-res" href="/reservations" variant="dark" size="lg" block>
+        <Button className="make-res" href="/reservations" variant="light" size="lg" block>
           Make a Reservation
         </Button>
         <CardDeck class="fl-card-container">

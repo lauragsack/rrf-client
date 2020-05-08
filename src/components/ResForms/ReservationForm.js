@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import ReservationModel from '../../models/reservation';
 import ReservationType from './ReservationType';
+import Footer from '../Footer';
 
 class ReservationForm extends Component {
   state = {
+    user: this.props.currentUser.data,
     startDate: "",
     endDate: "",
     totalPrice: "",
@@ -18,16 +20,22 @@ class ReservationForm extends Component {
     this.setState({
         [event.target.name]: event.target.value
     })
-    this.getTotalPrice();
-}
+    // this.getTotalPrice();
+  }
 
-  getTotalPrice() {
-    let totalPrice;
-    // calculate total
+  handleBeachChange = (event) => {
     this.setState({
-      totalPrice: totalPrice
+      pickupAddress: event.target.value
     })
   }
+
+  // getTotalPrice() {
+  //   let totalPrice;
+  //   // calculate total
+  //   this.setState({
+  //     totalPrice: totalPrice
+  //   })
+  // }
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -42,7 +50,7 @@ class ReservationForm extends Component {
               deliveryAddress: "",
               floaties: []
             })
-            console.log(res.data.user);
+            console.log(res.data);
         })
         .catch(err => console.log(err))
 }
@@ -50,6 +58,7 @@ class ReservationForm extends Component {
 
   render() {
     return (
+      <>
       <Form className="resForm">
         <Form.Row>
           <Form.Group controlId="startDate">
@@ -93,6 +102,7 @@ class ReservationForm extends Component {
       <Form.Group>
         <ReservationType 
         handleChange={this.handleChange} 
+        handleBeachChange={this.handleBeachChange}
         pickupAddress={this.pickupAddress} 
         deliveryAddress={this.deliveryAddress} type={this.state.type}
         />
@@ -102,6 +112,8 @@ class ReservationForm extends Component {
         Submit
       </Button>
     </Form>
+    {/* <Footer/> */}
+    </>
     );
   }
 }

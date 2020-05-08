@@ -1,11 +1,13 @@
 import React from 'react';
 import { Card, CardColumns } from 'react-bootstrap';
 import BeachContainer from '../containers/BeachContainer';
+import Footer from './Footer';
 
 const Home = () => {
     return (
     <>
         <BeachContainer/>
+        <Footer/>
     </>
     // <CardColumns>
     //     <Card>

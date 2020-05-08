@@ -37,10 +37,10 @@ class FloatieDetail extends Component {
 
   render() {
     return (
-      <Card>
-        <Card.Img variant="top" src={this.state.floatie.photo} />
+      <Card className="fl-detail-card">
+        <Card.Img className="fl-detail-img" variant="top" src={this.state.floatie.photo} />
         <Card.Body>
-          <Card.Title>{this.state.floatieName}</Card.Title>
+          <Card.Title className="fl-detail-title">{this.state.floatieName}</Card.Title>
           <Card.Text>
             {this.state.floatie.description}
           </Card.Text>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CardDeck, Button } from 'react-bootstrap/'; 
 import Floatie from '../components/Floatie';
+import Footer from '../components/Footer';
 
 class FloatiesContainer extends Component {
   state = {
@@ -21,20 +22,21 @@ class FloatiesContainer extends Component {
       <>
       {this.props.currentUser?
         <>
-        <Button href="/reservations" variant="light" size="lg" block>
+        <Button className="make-res" href="/reservations" variant="dark" size="lg" block>
           Make a Reservation
         </Button>
-        <CardDeck>
+        <CardDeck class="fl-card-container">
           {floaties}
         </CardDeck>
         </>
         :
         <>
-        <CardDeck>
+        <CardDeck class="fl-card-container">
           {floaties}
         </CardDeck>
         </>
       }
+      <Footer/>
       </>
     );
   }

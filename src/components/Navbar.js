@@ -20,12 +20,12 @@ class NavbarNew extends Component {
     const {signup, login} = this.state;
     return (
       <>
-        <Navbar bg="info" expand="lg">
+        <Navbar className="nav" expand="lg">
           <Navbar.Brand href="/">
           <img
           src="https://i.imgur.com/RcAwEzL.png"
-          width="150"
-          height="150"
+          width="130"
+          height="130"
           className="d-inline-block align-top"
           alt="Russian River Floaties logo"
           />

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Routes from './config/routes';
 import NavbarNew from './components/Navbar';
-import Footer from './components/Footer';
 import UserModel from './models/user';
 import FloatieModel from './models/floatie';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -59,7 +58,6 @@ class App extends Component {
                     floatieList={this.state.floatieList}
                     />
                 </>
-                {/* <Footer/> */}
             </>
         );
     }

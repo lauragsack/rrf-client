@@ -30,7 +30,8 @@ class BeachContainer extends Component {
       )
     })
     return (
-      <Container>
+      <Container className="beachContainer">
+        <h3 className="mapTitle">Russian River Floatie Beaches</h3>
         <BeachMap/>
         <div className="beaches">
           {beaches}

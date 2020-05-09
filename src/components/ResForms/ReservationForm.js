@@ -29,13 +29,13 @@ class ReservationForm extends Component {
       pickupAddress: event.target.value
     })
   }
-
+  
   handleFloatieChange = (event) => {
     let floatie = {floatie: event.target.id, price:event.target.className, quantity: event.target.value}
     let floaties = [floatie, ...this.state.floaties];
     this.setState({
       floaties: floaties,
-    })
+    }, () => {this.getTotalPrice()})
   }
 
   getDays(startDate, endDate) {
@@ -143,7 +143,6 @@ class ReservationForm extends Component {
           floatieList={this.props.floatieList}
           handleFloatieChange={this.handleFloatieChange} 
           floaties={this.state.floaties}
-          getTotalPrice={this.getTotalPrice}
         />
       </Form.Group>
 

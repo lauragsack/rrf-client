@@ -131,8 +131,8 @@ class ReservationForm extends Component {
         <ReservationType 
           handleChange={this.handleChange} 
           handleBeachChange={this.handleBeachChange}
-          pickupAddress={this.pickupAddress} 
-          deliveryAddress={this.deliveryAddress} 
+          pickupAddress={this.state.pickupAddress} 
+          deliveryAddress={this.state.deliveryAddress} 
           type={this.state.type}
         />
       </Form.Group>
@@ -146,7 +146,8 @@ class ReservationForm extends Component {
         />
       </Form.Group>
 
-      <Button variant="secondary" type="submit" href="/reservations/user">
+      <Button variant="secondary" type="submit">
+      {/* href="/reservations/user" */}
         Submit
       </Button>
     </Form>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Dropdown, Card } from 'react-bootstrap';
 import Cancel from './Cancel';
-import ReservationModel from '../models/reservation';
 
 class Reservation extends Component {
   state = {

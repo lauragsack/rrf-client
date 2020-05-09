@@ -31,7 +31,7 @@ class ReservationForm extends Component {
   }
   
   handleFloatieChange = (event) => {
-    let floatie = {floatie: event.target.id, price:event.target.className, quantity: event.target.value}
+    let floatie = {floatie: event.target.id, price: event.target.className, quantity: event.target.value}
     let floaties = [floatie, ...this.state.floaties];
     this.setState({
       floaties: floaties,
@@ -146,8 +146,7 @@ class ReservationForm extends Component {
         />
       </Form.Group>
 
-      <Button variant="secondary" type="submit">
-      {/* href="/reservations/user" */}
+      <Button variant="secondary" type="submit" href="/reservations/user">
         Submit
       </Button>
     </Form>

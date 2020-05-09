@@ -13,6 +13,12 @@ export default class ReservationModel {
     return request;
   }
 
+  static show = (reservationId) => {
+    console.log(reservationId)
+    let request = axios.get(`${REACT_APP_API_URL}/${reservationId}`, reservationId, {withCredentials: true});
+    return request;
+  }
+
   static update = (reservationId) => {
     let request = axios.put(`${REACT_APP_API_URL}/${reservationId}`, reservationId, {withCredentials: true});
     return request;

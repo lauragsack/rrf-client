@@ -26,8 +26,15 @@ class ReservationEdit extends Component {
     })
   }
 
+  componentDidUpdate() {
+    if(this.state.reservation.startDate === "") {
+      this.fetchReservation();
+    }
+  }
+
   async fetchReservation() {
     let res = await ReservationModel.show(this.state.reservationId)
+    console.log(res.data)
     this.setState({
       reservation: res.data
     })

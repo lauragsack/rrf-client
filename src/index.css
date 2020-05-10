@@ -16,14 +16,21 @@ body {
   font-size: 30px;
 }
 
-.homeTitle {
+#homeTitle {
   font-family: 'Gidugu', sans-serif;
   font-size: 50px;
+  color: black;
 }
 
 .homeBody {
   background-image: url("");
-  margin-bottom: 50px;
+  background-size: cover;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .footer {
@@ -48,8 +55,26 @@ body {
   font-size: 30px;
 }
 
-.make-res {
-  font-family: 'Roboto Slab', serif;
+#make-res, #make-res-fl {
+  font-family: 'Gidugu', sans-serif;
+  color: black;
+  /* background-color: rgb(169, 241, 220); */
+}
+
+.floatieTitle {
+  font-family: 'Gidugu', sans-serif;
+}
+
+.floatieBody {
+  background-image: url("");
+  background-size: cover;
+}
+
+.fl-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .floatie-card {
@@ -62,28 +87,26 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
-.fl-card-container {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  flex-wrap: wrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
 .fl-card-img {
   height: 70%;
   object-fit: cover;
 }
 
-.floatieBody {
-  background-image: url("");
+.resList {
+  background-image: url("https://i.imgur.com/Ylb1ON1.jpg");
   background-size: cover;
-  margin-bottom: 50px;
 }
 
-.reservationCard {
+.resCards {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 30rem 5rem;
+}
+
+#reservationCard {
   font-family: 'Roboto Slab', serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bolder;
 }
 
 #dropdown-basic {

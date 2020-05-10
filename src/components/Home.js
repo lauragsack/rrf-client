@@ -7,15 +7,15 @@ const Home = () => {
     <>
         <Container fluid className="homeBody">
             <Row>
+                <h1 id="homeTitle">Russian River Floaties</h1>
+            </Row>
+            <Row>
             <Col md="auto">
                 <BeachContainer/>
             </Col>
-            <Col md="auto">
-                <h3 className="homeTitle">Or we'll meet you at home</h3>
-            </Col>
-            <Col md="auto">
-                <h3 className="homeTitle">All floatie fun, no floatie hassle!</h3>
-            </Col>
+            {/* <Col md="auto">
+                
+            </Col> */}
             </Row>
         </Container>
     </>

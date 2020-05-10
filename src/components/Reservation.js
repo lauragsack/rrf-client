@@ -18,7 +18,7 @@ class Reservation extends Component {
     let startDate = new Intl.DateTimeFormat('en-US').format(new Date(this.props.reservation.startDate));
     let endDate = new Intl.DateTimeFormat('en-US').format(new Date(this.props.reservation.endDate));
     return (
-      <Card className="reservationCard">
+      <Card id="reservationCard">
           <Dropdown className="float-right dropdown">
             <Dropdown.Toggle variant="light" id="dropdown-basic">
               Manage

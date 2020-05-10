@@ -8,7 +8,7 @@ const Floatie = (props) => {
     <Card className="floatie-card">
       <Card.Img className="fl-card-img" variant="top" src={props.floatie.photo} />
       <Card.Body>
-        <Card.Title className="floatieTitle"><Link to={`/floaties/${props.floatie.name}`}>{props.floatie.name}</Link></Card.Title>
+        <Card.Title className="floatieTitle" style={{fontSize: 35}}><Link to={`/floaties/${props.floatie.name}`}>{props.floatie.name}</Link></Card.Title>
         <Card.Text className="fl-card-text">
           {props.floatie.deliverable === true ?
             <>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, CardColumns } from 'react-bootstrap'
 import ReservationModel from '../models/reservation';
 import Reservation from './Reservation';
+import Footer from './Footer';
 
 class Reservations extends Component {
   state = {

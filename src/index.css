@@ -23,6 +23,7 @@ body {
 
 .homeBody {
   background-image: url("");
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -78,6 +79,7 @@ body {
 .floatieBody {
   background-image: url("");
   background-size: cover;
+  margin-bottom: 50px;
 }
 
 .reservationCard {

@@ -151,12 +151,10 @@ class ReservationForm extends Component {
         Reservation Total: ${this.state.totalPrice}
       </div>
 
-      <Button variant="secondary" type="submit">
-      {/* TODO: href="/reservations/user" */}
+      <Button variant="secondary" type="submit" href="/reservations/user">
         Submit
       </Button>
     </Form>
-    <Footer/>
     </>
     );
   }

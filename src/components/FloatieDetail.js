@@ -68,7 +68,7 @@ class FloatieDetail extends Component {
             </>
             :
             <>
-              DogFriendly: <i className="fas fa-times"></i> 
+              Dog Friendly: <i className="fas fa-times"></i> 
             </>
           }
           </Card.Text>  

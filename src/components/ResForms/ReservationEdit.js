@@ -88,7 +88,6 @@ class ReservationEdit extends Component {
             name="type"
             id="type" 
             value={this.state.reservation.type}
-            // defaultValue={this.state.reservation.type}
           >
             <option>Select One...</option>
             <option>Delivery</option>
@@ -106,13 +105,10 @@ class ReservationEdit extends Component {
           />
         </Form.Group>
 
-      <Button variant="secondary" type="submit">
-      {/* TODO: add back below redirect */}
-      {/* href="/reservations/user" */}
+      <Button variant="secondary" type="submit" href="/reservations/user">
         Submit
       </Button>
     </Form>
-    <Footer/>
     </>
     );
   }

@@ -8,7 +8,7 @@ class Reservation extends Component {
   }
 
   closeCancel = (e) => {
-    console.log(e)
+    e.stopPropagation();
     this.setState({cancel: false});
   }
   openCancel = () => this.setState({cancel: true});

@@ -1,9 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+
 const Floatie = (props) => {
   return (
-    <>
+
     <Card className="floatie-card">
       <Card.Img className="fl-card-img" variant="top" src={props.floatie.photo} />
       <Card.Body>
@@ -24,7 +25,6 @@ const Floatie = (props) => {
         </Card.Text>
       </Card.Body>
     </Card>
-    </>
   );
 }
 

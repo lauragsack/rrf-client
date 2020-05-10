@@ -70,13 +70,13 @@ class ReservationEdit extends Component {
               deliveryAddress: "",
             })
             console.log(res.data);
+            this.props.history.push("/reservations/user")
         })
         .catch(err => console.log(err))
 }
 
 
   render() {
-    console.log(this.state.reservation.type)
     return (
       <>
       <Form className="resForm" onSubmit={this.handleSubmit}>
@@ -105,7 +105,7 @@ class ReservationEdit extends Component {
           />
         </Form.Group>
 
-      <Button variant="secondary" type="submit" href="/reservations/user">
+      <Button variant="secondary" type="submit">
         Submit
       </Button>
     </Form>

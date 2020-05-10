@@ -14,7 +14,8 @@ class Reservations extends Component {
   }
 
   async fetchReservations() {
-    let res = await ReservationModel.user(this.props.currentUser)
+    console.log(this.props.currentUser)
+    let res = await ReservationModel.user()
     this.setState({
       reservations: res.data
     })

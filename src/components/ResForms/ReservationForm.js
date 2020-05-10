@@ -80,6 +80,7 @@ class ReservationForm extends Component {
               floaties: []
             })
             console.log(res.data);
+            this.props.history.push("/reservations/user")
         })
         .catch(err => console.log(err))
 }
@@ -151,7 +152,7 @@ class ReservationForm extends Component {
         Reservation Total: ${this.state.totalPrice}
       </div>
 
-      <Button variant="secondary" type="submit" href="/reservations/user">
+      <Button variant="secondary" type="submit">
         Submit
       </Button>
     </Form>

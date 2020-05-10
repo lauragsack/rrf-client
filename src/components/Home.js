@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import BeachContainer from '../containers/BeachContainer';
-import Footer from './Footer';
 
 const Home = () => {
     return (

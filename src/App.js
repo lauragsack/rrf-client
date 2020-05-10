@@ -59,7 +59,7 @@ class App extends Component {
                     floatieList={this.state.floatieList}
                     />
                 </>
-                <Footer/>
+                {/* <Footer/> */}
             </>
         );
     }

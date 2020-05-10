@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import ReservationModel from '../../models/reservation';
 import ReservationType from './ReservationType';
-import Floaties from './Floaties';
 import Footer from '../Footer';
 
 class ReservationEdit extends Component {
@@ -51,9 +50,10 @@ class ReservationEdit extends Component {
   }
 
   handleBeachChange = (event) => {
-    console.log(event) 
+    console.log(this.state)
     this.setState({
       reservation: {
+        ...this.state.reservation,
         pickupAddress: event.target.value
       }
     })
@@ -88,7 +88,7 @@ class ReservationEdit extends Component {
             name="type"
             id="type" 
             value={this.state.reservation.type}
-            defaultValue={this.state.reservation.type}
+            // defaultValue={this.state.reservation.type}
           >
             <option>Select One...</option>
             <option>Delivery</option>
@@ -107,10 +107,12 @@ class ReservationEdit extends Component {
         </Form.Group>
 
       <Button variant="secondary" type="submit">
+      {/* TODO: add back below redirect */}
       {/* href="/reservations/user" */}
         Submit
       </Button>
     </Form>
+    <Footer/>
     </>
     );
   }

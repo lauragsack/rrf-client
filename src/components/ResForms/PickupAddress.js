@@ -5,7 +5,7 @@ import Media from 'react-bootstrap/Media'
 class PickupAddress extends Component {
   state = {
     beaches: [],
-    selectedBeach: this.props.pickupAddress
+    selectedBeach: this.props.pickupAddress,
   }
 
   componentDidMount() {

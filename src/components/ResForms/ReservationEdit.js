@@ -111,7 +111,6 @@ class ReservationEdit extends Component {
         Submit
       </Button>
     </Form>
-    <Footer/>
     </>
     );
   }

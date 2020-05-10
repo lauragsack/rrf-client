@@ -27,7 +27,7 @@ class Signup extends Component {
                     password2: "",
                     favFloatie: {}
                 })
-                console.log(res.data.user);
+                console.log(res.data.user)
                 this.props.setCurrentUser(res.data.user)
                 this.props.history.push("/floaties")
             })
@@ -35,16 +35,6 @@ class Signup extends Component {
     }
 
     render() {
-        // console.log(this.props.floatieList);
-        // let floatieOptions = this.props.floatieList.map((floatie, index) => {
-        //     return (
-        //         <option
-        //             key={index}
-        //             value={floatie}>
-        //                 {floatie.name}
-        //         </option>
-        //     )
-        // })
         return (
             <div className="container mt-4">
                 <div className="row">
@@ -95,18 +85,6 @@ class Signup extends Component {
                                     value={this.state.password2}
                                 />
                             </div>
-                            {/* <div className="form-group">
-                                <label htmlFor="favFloatie">Go to Floatie!</label>
-                                <select
-                                    onChange={this.handleChange}
-                                    className="form control form-control-lg"
-                                    id="favFloatie"
-                                    name="favFloatie"
-                                    value={this.state.favFloatie}
-                                >
-                                    {floatieOptions}
-                                </select>
-                            </div> */}
                             <button className="btn btn-primary pull-left" type="submit" onClick={this.props.onClick}>Sign up</button>
                         </form>
                     </div>

@@ -7,7 +7,7 @@ import Footer from '../Footer';
 
 class ReservationForm extends Component {
   state = {
-    user: this.props.currentUser.data,
+    user: this.props.currentUser,
     startDate: "",
     endDate: "",
     totalPrice: "",
@@ -65,6 +65,7 @@ class ReservationForm extends Component {
   }
 
   handleSubmit = (event) => {
+    console.log(this.state)
     event.preventDefault()
     ReservationModel.create(this.state)
         .then(res => {

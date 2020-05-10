@@ -87,8 +87,8 @@ class ReservationEdit extends Component {
             onChange = {this.handleChange}
             name="type"
             id="type" 
-            value={this.state.type}
-            defaultValue={this.state.type}
+            value={this.state.reservation.type}
+            defaultValue={this.state.reservation.type}
           >
             <option>Select One...</option>
             <option>Delivery</option>

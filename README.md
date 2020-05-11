@@ -24,7 +24,7 @@ For a complete list of Russian River Floaties user stories, checkout our [Trello
 ![ERD](https://i.imgur.com/t0aMvFD.png)
 
 ### Technologies Used
-I built this app using a MERN stack (Mongoose, Express, React, Node), Google Places API, Google Maps Static API, and React Bootstrap.
+I built this app using a MERN stack (MongoDB, Express, React, Node), Google Places API, Google Maps Static API, and React Bootstrap.
 
 #### Installation Steps
 

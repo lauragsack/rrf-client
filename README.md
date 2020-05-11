@@ -60,7 +60,7 @@ I built this app using a MERN stack (Mongoose, Express, React, Node), Google Pla
   * node-fetch
 
 ##### References
-These sources helped make ParkAdvisor a reality:
+These sources helped make Russian River Floaties a reality:
 * https://unsplash.com/
 * https://www.freelogodesign.org/
 * https://thenounproject.com/search/?q=floatie&i=1866474

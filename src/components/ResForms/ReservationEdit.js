@@ -105,7 +105,7 @@ class ReservationEdit extends Component {
           />
         </Form.Group>
 
-      <Button variant="secondary" type="submit">
+      <Button variant="light" type="submit">
         Submit
       </Button>
     </Form>

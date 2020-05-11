@@ -186,6 +186,8 @@ body {
   padding: 10px;
   font-family: 'Gidugu', sans-serif;
   font-size: 30px;
+  color: pink;
+  text-decoration: underline;
 }
 
 #resSubmit {

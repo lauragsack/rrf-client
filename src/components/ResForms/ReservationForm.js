@@ -152,7 +152,7 @@ class ReservationForm extends Component {
         Reservation Total: ${this.state.totalPrice}
       </div>
 
-      <Button variant="secondary" type="submit" id="resSubmit">
+      <Button variant="light" type="submit" id="resSubmit">
         Submit
       </Button>
     </Form>

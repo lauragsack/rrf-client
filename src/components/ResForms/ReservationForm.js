@@ -3,7 +3,6 @@ import { Form, Button } from 'react-bootstrap';
 import ReservationModel from '../../models/reservation';
 import ReservationType from './ReservationType';
 import Floaties from './Floaties';
-import Footer from '../Footer';
 
 class ReservationForm extends Component {
   state = {

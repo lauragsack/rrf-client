@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BeachModel from '../../models/beach';
-import Media from 'react-bootstrap/Media'
 
 class PickupAddress extends Component {
   state = {

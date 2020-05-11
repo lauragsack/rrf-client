@@ -77,7 +77,7 @@ body {
 }
 
 .fl-card-container {
-  background-image: url("https://images.unsplash.com/photo-1477058267562-6f70f44288a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-image: url("https://images.unsplash.com/photo-1522173096622-763cc9d35a3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -125,7 +125,7 @@ body {
 }
 
 #fl-detail-container {
-  background-image: url("https://images.unsplash.com/photo-1477058267562-6f70f44288a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-image: url("https://images.unsplash.com/photo-1522173096622-763cc9d35a3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -179,8 +179,9 @@ body {
   padding: 2rem 2rem 5rem;
   font-family: 'Roboto Slab', serif;
   font-weight: bolder;
-  background-image: url("https://i.imgur.com/pghuj8b.jpg");
+  background-image: url("https://images.unsplash.com/photo-1527594037144-789c45c59abc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
+  color: white;
 }
 
 #startDate, #endDate {
@@ -191,8 +192,8 @@ body {
   padding: 10px;
   font-family: 'Gidugu', sans-serif;
   font-size: 30px;
-  color: pink;
   text-decoration: underline;
+  color: pink;
 }
 
 #resSubmit {

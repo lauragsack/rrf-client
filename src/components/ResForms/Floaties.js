@@ -9,12 +9,12 @@ class Floaties extends Component {
   render() {
     let floatieOptions = this.props.floatieList.map((floatie) => {
       return (
-        <div>
+        <div id="resFl">
           <label>
-          {floatie.name}: 
-          {`$${floatie.price} / day`}
+          {floatie.name}:
+          {` $${floatie.price} / day`}<br/>
           <img
-            width={160}
+            width={170}
             height={130}
             className="flImage"
             src={floatie.photo}

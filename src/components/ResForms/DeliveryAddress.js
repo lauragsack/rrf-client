@@ -9,7 +9,7 @@ class DeliveryAddress extends Component {
   render() {
     return (
       <Form.Group controlId="deliveryAddress">
-      <Form.Label>Delivery Address</Form.Label>
+      <Form.Label className="resLabel">Delivery Address</Form.Label>
       <Form.Control 
         placeholder="123 River Rd, Guerneville, CA 95446" 
         type="text" 

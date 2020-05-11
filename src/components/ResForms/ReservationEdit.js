@@ -81,7 +81,7 @@ class ReservationEdit extends Component {
       <>
       <Form className="resForm" onSubmit={this.handleSubmit}>
         <Form.Group controlId="type">
-          <Form.Label>Pickup or Delivery?</Form.Label>
+          <Form.Label className="resLabel">Pickup or Delivery?</Form.Label>
           <Form.Control
             as="select" 
             onChange = {this.handleChange}

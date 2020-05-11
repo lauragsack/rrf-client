@@ -91,8 +91,8 @@ class ReservationForm extends Component {
       <>
       <Form className="resForm" onSubmit={this.handleSubmit}>
         <Form.Row>
-          <Form.Group controlId="startDate">
-            <Form.Label>Start Date</Form.Label>
+          <Form.Group controlId="startDate" id="startDate">
+            <Form.Label className="resLabel">Start Date</Form.Label>
             <Form.Control 
               onChange={this.handleChange}
               type="date" 
@@ -102,8 +102,8 @@ class ReservationForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="endDate">
-            <Form.Label>End Date</Form.Label>
+          <Form.Group controlId="endDate" id="endDate">
+            <Form.Label className="resLabel">End Date</Form.Label>
             <Form.Control 
               onChange={this.handleChange}
               type="date" 
@@ -115,7 +115,7 @@ class ReservationForm extends Component {
         </Form.Row>
 
       <Form.Group controlId="type">
-        <Form.Label>Pickup or Delivery?</Form.Label>
+        <Form.Label className="resLabel">Pickup or Delivery?</Form.Label>
         <Form.Control
           as="select" 
           onChange = {this.handleChange}
@@ -140,7 +140,7 @@ class ReservationForm extends Component {
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Floaties</Form.Label>
+        <Form.Label className="resLabel">Floaties</Form.Label>
         <Floaties
           floatieList={this.props.floatieList}
           handleFloatieChange={this.handleFloatieChange} 
@@ -148,11 +148,11 @@ class ReservationForm extends Component {
         />
       </Form.Group>
 
-      <div>
+      <div id="resTotal">
         Reservation Total: ${this.state.totalPrice}
       </div>
 
-      <Button variant="secondary" type="submit">
+      <Button variant="secondary" type="submit" id="resSubmit">
         Submit
       </Button>
     </Form>

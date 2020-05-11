@@ -20,15 +20,23 @@ body {
   font-family: 'Gidugu', sans-serif;
   font-size: 50px;
   color: black;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+#welcome {
+  font-weight: bolder;
+  padding: 10px;
+  color: white;
 }
 
 .homeBody {
-  background-image: url("");
+  font-family: 'Roboto Slab', serif;
+  background-image: url("https://i.imgur.com/v0EW9VP.jpg");
   background-size: cover;
-  margin-bottom: 3rem;
+  padding: 2rem 0rem 5rem;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
@@ -41,13 +49,15 @@ body {
   text-align: right;
 }
 
-.beachDet {
+#beachDet {
   padding: 10px 0 5px 0;
   font-family: 'Roboto Slab', serif;
+  color: black;
 }
 
 .beachDetBody {
   padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 #beachName {
@@ -58,17 +68,16 @@ body {
 #make-res, #make-res-fl {
   font-family: 'Gidugu', sans-serif;
   color: black;
-  /* background-color: rgb(169, 241, 220); */
 }
 
 .floatieTitle {
   font-family: 'Gidugu', sans-serif;
 }
 
-.floatieBody {
+/* .floatieBody {
   background-image: url("");
   background-size: cover;
-}
+} */
 
 .fl-card-container {
   display: flex;
@@ -85,6 +94,8 @@ body {
   width: 25rem;
   margin: 1rem;
   font-family: 'Roboto Slab', serif;
+  border-radius: 5px;
+  border-color: pink;
 }
 
 .fl-card-img {

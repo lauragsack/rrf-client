@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import ReservationModel from '../../models/reservation';
 import ReservationType from './ReservationType';
-import Footer from '../Footer';
 
 class ReservationEdit extends Component {
   state = {

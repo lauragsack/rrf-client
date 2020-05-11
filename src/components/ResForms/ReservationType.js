@@ -12,7 +12,7 @@ const ReservationType = (props) => {
       : props.type === "Delivery" ?
         <DeliveryAddress handleChange={props.handleChange} deliveryAddress={props.deliveryAddress}/>
       : 
-        <PickupAddress handleBeachChange={props.handleBeachChange} PickupAddress={props.pickupAddress}/>
+        <PickupAddress handleBeachChange={props.handleBeachChange} pickupAddress={props.pickupAddress}/>
     }
     </>
   );

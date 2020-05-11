@@ -1,26 +1,21 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import BeachContainer from '../containers/BeachContainer';
-import Footer from './Footer';
 
 const Home = () => {
     return (
-    <>
-        <Container fluid className="homeBody">
-            <Row>
-            <Col md="auto">
+    <Container fluid className="homeBody">
+        <Row>
+            <Col md-auto>
+                <div>
+                    <h1 id="homeTitle">Russian River Floaties</h1>
+                    <p id="welcome">Welcome to Russian River Floaties! Float your favorite river without the floatie hassle. 
+                    <br/>Meet us at the beach or we'll meet you at home. Check out the beaches we serve below!</p>
+                </div>
                 <BeachContainer/>
             </Col>
-            <Col md="auto">
-                <h3 className="homeTitle">Or we'll meet you at home</h3>
-            </Col>
-            <Col md="auto">
-                <h3 className="homeTitle">All floatie fun, no floatie hassle!</h3>
-            </Col>
-            </Row>
-        </Container>
-        <Footer/>
-    </>
+        </Row>
+    </Container>
     );
 }
 

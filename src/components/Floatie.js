@@ -1,13 +1,14 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 const Floatie = (props) => {
   return (
-    <Card className="floatie-card">
+
+    <Card className="floatie-card" id="fl-card">
       <Card.Img className="fl-card-img" variant="top" src={props.floatie.photo} />
       <Card.Body>
-        <Card.Title className="floatieTitle"><Link to={`/floaties/${props.floatie.name}`}>{props.floatie.name}</Link></Card.Title>
+        <Card.Title className="floatieTitle" style={{fontSize: 35}}><Link to={`/floaties/${props.floatie.name}`}>{props.floatie.name}</Link></Card.Title>
         <Card.Text className="fl-card-text">
           {props.floatie.deliverable === true ?
             <>

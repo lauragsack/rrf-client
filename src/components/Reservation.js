@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Dropdown, Card } from 'react-bootstrap';
 import Cancel from './Cancel';
-import ReservationModel from '../models/reservation';
 
 class Reservation extends Component {
   state = {
@@ -9,7 +8,7 @@ class Reservation extends Component {
   }
 
   closeCancel = (e) => {
-    console.log(e)
+    e.stopPropagation();
     this.setState({cancel: false});
   }
   openCancel = () => this.setState({cancel: true});
@@ -19,7 +18,7 @@ class Reservation extends Component {
     let startDate = new Intl.DateTimeFormat('en-US').format(new Date(this.props.reservation.startDate));
     let endDate = new Intl.DateTimeFormat('en-US').format(new Date(this.props.reservation.endDate));
     return (
-      <Card className="reservationCard">
+      <Card id="reservationCard">
           <Dropdown className="float-right dropdown">
             <Dropdown.Toggle variant="light" id="dropdown-basic">
               Manage

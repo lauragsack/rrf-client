@@ -5,7 +5,7 @@ import Media from 'react-bootstrap/Media'
 class PickupAddress extends Component {
   state = {
     beaches: [],
-    selectedBeach: this.props.PickupAddress
+    selectedBeach: this.props.pickupAddress,
   }
 
   componentDidMount() {
@@ -22,9 +22,9 @@ class PickupAddress extends Component {
   render() {
     let beaches = this.state.beaches.map((beach) => {
       return (
-      <div>
+      <div id="radio">
         <label>
-          {beach.name}
+        <p>{beach.name} <br/> {beach.address}</p>
         <input 
           name="pickupChoice" 
           type="radio"
@@ -32,19 +32,13 @@ class PickupAddress extends Component {
           selected={this.state.selectedBeach === beach._id}
           onChange={this.props.handleBeachChange}
           />
-        <Media>
-          <img
-            width={160}
-            height={120}
-            className="beachImage"
-            src={beach.photo}
-            alt="river beach"
-          />
-          <Media.Body>
-            <p>{`${beach.rating} | ${beach.numRatings} reviews`}</p>
-            <p>{beach.address}</p>
-          </Media.Body>
-        </Media>
+        <img
+          width={160}
+          height={120}
+          className="beachImg"
+          src={beach.photo}
+          alt="river beach"
+        />
         </label>
       </div>
       )

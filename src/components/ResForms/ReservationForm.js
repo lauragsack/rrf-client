@@ -7,7 +7,7 @@ import Footer from '../Footer';
 
 class ReservationForm extends Component {
   state = {
-    user: this.props.currentUser.data,
+    user: this.props.currentUser,
     startDate: "",
     endDate: "",
     totalPrice: "",
@@ -24,18 +24,17 @@ class ReservationForm extends Component {
   }
 
   handleBeachChange = (event) => {
-    console.log(event) 
     this.setState({
       pickupAddress: event.target.value
     })
   }
-
+  
   handleFloatieChange = (event) => {
-    let floatie = {floatie: event.target.id, price:event.target.className, quantity: event.target.value}
+    let floatie = {floatie: event.target.id, price: event.target.className, quantity: event.target.value}
     let floaties = [floatie, ...this.state.floaties];
     this.setState({
-      floaties: floaties
-    })
+      floaties: floaties,
+    }, () => {this.getTotalPrice()})
   }
 
   getDays(startDate, endDate) {
@@ -51,24 +50,18 @@ class ReservationForm extends Component {
 
   getTotalPrice() {
     const days = this.getDays();
-    console.log(days)
     let subTotal;
-    let totalPrice = 0;
+    let resPrice = 0;
     this.state.floaties.forEach(floatie => {
       subTotal = parseInt(floatie.price) * parseInt(floatie.quantity)
-      console.log(subTotal)
-      totalPrice += (subTotal * days)
-      console.log(totalPrice)
+      resPrice += (subTotal * days)
+      this.setState({
+        totalPrice: resPrice
+      })
     })
-    console.log("getting total price")
-    this.setState({
-      totalPrice: totalPrice
-    })
-    console.log(this.state.totalPrice)
   }
 
   handleSubmit = (event) => {
-    this.getTotalPrice();
     event.preventDefault()
     ReservationModel.create(this.state)
         .then(res => {
@@ -83,6 +76,7 @@ class ReservationForm extends Component {
               floaties: []
             })
             console.log(res.data);
+            this.props.history.push("/reservations/user")
         })
         .catch(err => console.log(err))
 }
@@ -93,8 +87,8 @@ class ReservationForm extends Component {
       <>
       <Form className="resForm" onSubmit={this.handleSubmit}>
         <Form.Row>
-          <Form.Group controlId="startDate">
-            <Form.Label>Start Date</Form.Label>
+          <Form.Group controlId="startDate" id="startDate">
+            <Form.Label className="resLabel">Start Date</Form.Label>
             <Form.Control 
               onChange={this.handleChange}
               type="date" 
@@ -104,8 +98,8 @@ class ReservationForm extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="endDate">
-            <Form.Label>End Date</Form.Label>
+          <Form.Group controlId="endDate" id="endDate">
+            <Form.Label className="resLabel">End Date</Form.Label>
             <Form.Control 
               onChange={this.handleChange}
               type="date" 
@@ -117,7 +111,7 @@ class ReservationForm extends Component {
         </Form.Row>
 
       <Form.Group controlId="type">
-        <Form.Label>Pickup or Delivery?</Form.Label>
+        <Form.Label className="resLabel">Pickup or Delivery?</Form.Label>
         <Form.Control
           as="select" 
           onChange = {this.handleChange}
@@ -135,14 +129,14 @@ class ReservationForm extends Component {
         <ReservationType 
           handleChange={this.handleChange} 
           handleBeachChange={this.handleBeachChange}
-          pickupAddress={this.pickupAddress} 
-          deliveryAddress={this.deliveryAddress} 
+          pickupAddress={this.state.pickupAddress} 
+          deliveryAddress={this.state.deliveryAddress} 
           type={this.state.type}
         />
       </Form.Group>
 
       <Form.Group>
-        <Form.Label>Floaties</Form.Label>
+        <Form.Label className="resLabel">Floaties</Form.Label>
         <Floaties
           floatieList={this.props.floatieList}
           handleFloatieChange={this.handleFloatieChange} 
@@ -150,11 +144,14 @@ class ReservationForm extends Component {
         />
       </Form.Group>
 
-      <Button variant="secondary" type="submit">
+      <div id="resTotal">
+        Reservation Total: ${this.state.totalPrice}
+      </div>
+
+      <Button variant="light" type="submit" id="resSubmit">
         Submit
       </Button>
     </Form>
-    <Footer/>
     </>
     );
   }

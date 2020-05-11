@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer fixed-bottom">
             <div className="right">All Rights Reserved, &copy; 2020 Russian River Floaties &nbsp;
                 <img
                     src="https://i.imgur.com/Gb8GHun.png"

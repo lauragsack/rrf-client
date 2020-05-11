@@ -3,7 +3,7 @@ import Media from 'react-bootstrap/Media'
 
 const BeachDetail = (props) => {
   return (
-    <Media className="beachDet">
+    <Media id="beachDet">
       <img
         width={160}
         height={120}

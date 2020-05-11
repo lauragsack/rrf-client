@@ -19,18 +19,20 @@ export default (props) => (
                 currentUser={props.currentUser}
             />
         </Route>
-        <Route path="/reservations">
-            <ReservationForm
+        <Route exact path="/reservations" render={(routeProps) => {
+            return <ReservationForm
+                {...routeProps}
                 currentUser={props.currentUser}
                 floatieList={props.floatieList}
             />
-        </Route>
-        <Route path="/reservations/:id">
-            <ReservationEdit
+        }}/>
+        <Route path="/reservations/:id" render={(routeProps) => {
+            return <ReservationEdit
+                {...routeProps}
                 currentUser={props.currentUser}
                 floatieList={props.floatieList}
             />
-        </Route>
+        }}/>
         <Route exact path="/floaties">
             <FloatiesContainer
                 currentUser={props.currentUser}

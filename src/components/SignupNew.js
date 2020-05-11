@@ -28,7 +28,6 @@ class SignupNew extends Component {
                     password2: "",
                     favFloatie: {}
                 })
-                console.log(res.data.user)
                 this.props.setCurrentUser(res.data.user)
                 this.props.history.push("/floaties")
             })

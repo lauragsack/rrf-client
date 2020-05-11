@@ -18,7 +18,6 @@ class LoginNew extends Component {
         event.preventDefault()
         UserModel.login(this.state)
         .then(res => {
-            console.log(res.data.user)
             this.props.setCurrentUser(res.data.user)
             this.props.history.push("/reservations/user")
         })

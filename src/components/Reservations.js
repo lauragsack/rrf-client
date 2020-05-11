@@ -14,7 +14,6 @@ class Reservations extends Component {
   }
 
   async fetchReservations() {
-    console.log(this.props.currentUser)
     let res = await ReservationModel.user()
     this.setState({
       reservations: res.data
@@ -22,7 +21,6 @@ class Reservations extends Component {
   }
 
   cancelReservation = async(event) => {
-    console.log(event.target.id)
     let res = await ReservationModel.delete(event.target.id)
     this.setState({
       cancel: false

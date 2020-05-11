@@ -30,10 +30,9 @@ class BeachContainer extends Component {
       )
     })
     return (
-      <Container className="beachContainer">
-        <h3 className="homeTitle">Meet us at the beach</h3>
+      <Container id="beachContainer">
         <BeachMap/>
-        <div className="beaches">
+        <div id="beaches">
           {beaches}
         </div>
       </Container>

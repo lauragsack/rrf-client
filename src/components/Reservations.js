@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, CardColumns } from 'react-bootstrap'
 import ReservationModel from '../models/reservation';
 import Reservation from './Reservation';
+import Footer from './Footer';
 
 class Reservations extends Component {
   state = {
@@ -13,14 +14,13 @@ class Reservations extends Component {
   }
 
   async fetchReservations() {
-    let res = await ReservationModel.user(this.props.currentUser)
+    let res = await ReservationModel.user()
     this.setState({
       reservations: res.data
     })
   }
 
   cancelReservation = async(event) => {
-    console.log(event.target.id)
     let res = await ReservationModel.delete(event.target.id)
     this.setState({
       cancel: false
@@ -40,10 +40,10 @@ class Reservations extends Component {
     })
     return (
       <div className="resList">
-        <Button className="make-res" href="/reservations" variant="light" size="lg" block>
+        <Button id="make-res" href="/reservations" variant="light" block style={{fontSize: 35}}>
           Make a Reservation
         </Button>
-        <CardColumns>
+        <CardColumns className="resCards">
           {reservations}
         </CardColumns>
       </div>

@@ -16,13 +16,29 @@ body {
   font-size: 30px;
 }
 
-.homeTitle {
+#homeTitle {
   font-family: 'Gidugu', sans-serif;
   font-size: 50px;
+  color: black;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+#welcome {
+  font-weight: bolder;
+  padding: 10px;
+  color: white;
 }
 
 .homeBody {
-  background-image: url("");
+  font-family: 'Roboto Slab', serif;
+  background-image: url("https://i.imgur.com/B7Hvlvd.jpg");
+  background-size: cover;
+  padding: 2rem 0rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .footer {
@@ -33,13 +49,15 @@ body {
   text-align: right;
 }
 
-.beachDet {
+#beachDet {
   padding: 10px 0 5px 0;
   font-family: 'Roboto Slab', serif;
+  color: black;
 }
 
 .beachDetBody {
   padding-left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 #beachName {
@@ -47,8 +65,24 @@ body {
   font-size: 30px;
 }
 
-.make-res {
-  font-family: 'Roboto Slab', serif;
+#make-res, #make-res-fl {
+  font-family: 'Gidugu', sans-serif;
+  color: black;
+}
+
+.floatieTitle {
+  font-family: 'Gidugu', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.fl-card-container {
+  background-image: url("https://images.unsplash.com/photo-1477058267562-6f70f44288a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
 }
 
 .floatie-card {
@@ -59,15 +93,8 @@ body {
   width: 25rem;
   margin: 1rem;
   font-family: 'Roboto Slab', serif;
-}
-
-.fl-card-container {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  flex-wrap: wrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  border-radius: 5px;
+  border-color: pink;
 }
 
 .fl-card-img {
@@ -75,16 +102,126 @@ body {
   object-fit: cover;
 }
 
-.floatieBody {
-  background-image: url("");
+.resList {
+  background-image: url("https://i.imgur.com/gZFd3iD.jpg");
   background-size: cover;
 }
 
-.reservationCard {
+.resCards {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 30rem 5rem;
+}
+
+#reservationCard {
   font-family: 'Roboto Slab', serif;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bolder;
 }
 
 #dropdown-basic {
   font-family: 'Gidugu', sans-serif;
   font-size: 25px;
 }
+
+#fl-detail-container {
+  background-image: url("https://images.unsplash.com/photo-1477058267562-6f70f44288a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0rem 5rem;
+  /* margin: 0px; */
+}
+
+#fl-detail-img {
+  height: 50%;
+  object-fit: cover;
+  border-bottom-color: pink;
+  border-width: 5px;
+}
+
+#fl-detail-body {
+  padding-bottom: 5rem;
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+#fl-detail-title {
+  font-family: 'Gidugu', sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  color: pink;
+  display: flex;
+  justify-content: center;
+}
+
+#fl-detail-card, #fl-card {
+  border-color: pink;
+  border-width: 5px;
+}
+
+.modal-body, .modal-footer {
+  font-family: 'Roboto Slab', serif;
+}
+
+#signup-body, #login-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.resForm {
+  padding: 2rem 2rem 5rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  background-image: url("https://i.imgur.com/pghuj8b.jpg");
+  background-size: cover;
+}
+
+#startDate, #endDate {
+  padding: 0 10px 0 0;
+}
+
+#resTotal {
+  padding: 10px;
+  font-family: 'Gidugu', sans-serif;
+  font-size: 30px;
+  color: pink;
+  text-decoration: underline;
+}
+
+#resSubmit {
+  font-family: 'Gidugu', sans-serif;
+  font-size: 30px;
+}
+
+.resLabel {
+  font-family: 'Gidugu', sans-serif;
+  font-size: 30px;
+}
+
+.flImage {
+  padding-right: 10px;
+}
+
+#resFl {
+  padding: 5px 0;
+}
+
+#radio input[type="radio"] {
+  position: relative;
+}
+
+#radio label {
+  padding: 5px;
+}
+
+.beachImg {
+  padding-left: 15px;
+}
+

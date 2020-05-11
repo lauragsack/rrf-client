@@ -22,7 +22,6 @@ class ReservationEdit extends Component {
   }
 
   componentDidUpdate() {
-    console.log("componentDidUpdate")
     console.log(this.state)
     if(this.state.reservation.type === "") {
       this.fetchReservation();
@@ -30,9 +29,7 @@ class ReservationEdit extends Component {
   }
 
   async fetchReservation() {
-    console.log("fetching reservation")
     let res = await ReservationModel.show(this.state.reservationId)
-    console.log(res.data)
     this.setState({
       reservation: {
         user: res.data.user,
@@ -50,7 +47,6 @@ class ReservationEdit extends Component {
   }
 
   handleBeachChange = (event) => {
-    console.log(this.state)
     this.setState({
       reservation: {
         ...this.state.reservation,
@@ -70,25 +66,24 @@ class ReservationEdit extends Component {
               deliveryAddress: "",
             })
             console.log(res.data);
+            this.props.history.push("/reservations/user")
         })
         .catch(err => console.log(err))
 }
 
 
   render() {
-    console.log(this.state.reservation.type)
     return (
       <>
       <Form className="resForm" onSubmit={this.handleSubmit}>
         <Form.Group controlId="type">
-          <Form.Label>Pickup or Delivery?</Form.Label>
+          <Form.Label className="resLabel">Pickup or Delivery?</Form.Label>
           <Form.Control
             as="select" 
             onChange = {this.handleChange}
             name="type"
             id="type" 
             value={this.state.reservation.type}
-            // defaultValue={this.state.reservation.type}
           >
             <option>Select One...</option>
             <option>Delivery</option>
@@ -106,13 +101,10 @@ class ReservationEdit extends Component {
           />
         </Form.Group>
 
-      <Button variant="secondary" type="submit">
-      {/* TODO: add back below redirect */}
-      {/* href="/reservations/user" */}
+      <Button variant="light" type="submit">
         Submit
       </Button>
     </Form>
-    <Footer/>
     </>
     );
   }

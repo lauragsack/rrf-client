@@ -19,7 +19,6 @@ export default class ReservationModel {
   }
 
   static update = (reservation) => {
-    console.log(reservation)
     let request = axios.put(`${REACT_APP_API_URL}/${reservation.reservationId}`, reservation, {withCredentials: true});
     return request;
   }

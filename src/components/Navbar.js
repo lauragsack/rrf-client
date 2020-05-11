@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Modal, Nav } from 'react-bootstrap';
-import Signup from './Signup';
-import Login from './Login';
+import SignupNew from './SignupNew';
+import LoginNew from './LoginNew';
 
 class NavbarNew extends Component {
   state = {
@@ -49,21 +49,21 @@ class NavbarNew extends Component {
           </Navbar.Collapse>
         </Navbar>
         <Modal show={signup} onHide={this.closeSignup}>
-            <Modal.Body>
-                <Signup history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeSignup} floatieList={this.props.floatieList}/>
+            <Modal.Body id="signup-body">
+                <SignupNew history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeSignup} floatieList={this.props.floatieList}/>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer id="signup-footer">
                 <p>Already floating with us?</p>
                 <button className="btn text-info" onClick={this.signupToLogin}>
                     <u>Log in</u>
                 </button>
             </Modal.Footer>
         </Modal>
-        <Modal show={login} onHide={this.closeLogin}>
-            <Modal.Body>
-                <Login history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeLogin}/>
+        <Modal show={login} onHide={this.closeLogin} id="login-modal">
+            <Modal.Body id="login-body">
+                <LoginNew history={this.props.history} setCurrentUser={this.props.setCurrentUser} onClick={this.closeLogin}/>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer id="login-footer">
                 <p>Need to sign up?</p>
                 <button className="btn text-info" onClick={this.loginToSignup}>
                     <u>Sign up</u>

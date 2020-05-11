@@ -158,3 +158,14 @@ body {
   border-color: pink;
   border-width: 5px;
 }
+
+.modal-body, .modal-footer {
+  font-family: 'Roboto Slab', serif;
+}
+
+#signup-body, #login-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}

@@ -64,6 +64,7 @@ These sources helped make Russian River Floaties a reality:
 * https://unsplash.com/
 * https://www.freelogodesign.org/
 * https://thenounproject.com/search/?q=floatie&i=1866474
+* https://burst.shopify.com/
 * https://react-bootstrap.github.io/getting-started/introduction/
 * https://developers.google.com/places/web-service/intro
 * https://developers.google.com/maps/documentation/maps-static/dev-guide
@@ -76,4 +77,3 @@ These sources helped make Russian River Floaties a reality:
 * https://medium.com/better-programming/when-to-use-callback-function-of-setstate-in-react-37fff67e5a6c
 * https://stackoverflow.com/questions/45054970/react-updating-one-state-property-removes-other-states-properties-in-the-state
 * https://github.com/reactjs/react-modal/issues/702
-* https://burst.shopify.com/

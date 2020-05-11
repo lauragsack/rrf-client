@@ -77,10 +77,12 @@ body {
 }
 
 .fl-card-container {
+  background-image: url("https://images.unsplash.com/photo-1477058267562-6f70f44288a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 .floatie-card {
@@ -123,12 +125,15 @@ body {
 }
 
 #fl-detail-container {
+  background-image: url("https://images.unsplash.com/photo-1477058267562-6f70f44288a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   padding: 2rem 0rem 5rem;
+  /* margin: 0px; */
 }
 
 #fl-detail-img {

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const REACT_APP_API_URL = "https://young-everglades-30243.herokuapp.com//api/v1/auth";
+const REACT_APP_API_URL = "https://young-everglades-30243.herokuapp.com/api/v1/auth";
 
 export default class UserModel {
     static create = (data) => {

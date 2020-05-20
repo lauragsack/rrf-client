@@ -44,7 +44,7 @@ I built this app using a MERN stack (MongoDB, Express, React, Node), Google Plac
   * react-scripts
 
 ##### Backend
-* For and clone this repo [backend repo](https://github.com/lauragsack/rrf-client)
+* For and clone this repo [backend repo](https://github.com/lauragsack/rrf-api)
 * The server runs at https://localhost:3001
 * Run "npm i" to install dependencies
 * Run "node server.js" to start the server

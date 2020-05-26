@@ -1,6 +1,6 @@
 # Russian River Floaties
 
-### About Web App
+### About This App
 
 The Russian River is my happy place. My sister and I float the river each summer. An integral part of the fun is the floaties, but they're also inconvenient. 
 

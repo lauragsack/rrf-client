@@ -9,7 +9,7 @@ If you live in a city or don't frequent a large body of water, you likely don't 
 I created this app to make floaties easy. Reserve online, pickup at the beach or get them delivered to wherever is convenient for you. Return them or get them picked back up when you're done.
 
 #### Check it out
-Reserve your floatie [here!] (https://russian-river-floaties.herokuapp.com/)
+Reserve your floatie [here!](https://russian-river-floaties.herokuapp.com/)
 username: laura@dogs.com
 password: password
 

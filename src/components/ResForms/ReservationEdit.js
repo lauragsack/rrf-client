@@ -21,7 +21,6 @@ class ReservationEdit extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state)
     if(this.state.reservation.type === "") {
       this.fetchReservation();
     }
@@ -40,8 +39,11 @@ class ReservationEdit extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({
-        [event.target.name]: event.target.value
+    this.setState({ 
+      reservation: {
+        ...this.state.reservation,
+        deliveryAddress: event.target.value
+      }
     })
   }
 

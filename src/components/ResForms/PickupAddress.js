@@ -28,7 +28,8 @@ class PickupAddress extends Component {
           name="pickupChoice" 
           type="radio"
           value={beach._id}
-          selected={this.state.selectedBeach === beach._id}
+          defaultChecked={this.state.selectedBeach._id === beach._id}
+          selected={this.state.selectedBeach._id === beach._id}
           onChange={this.props.handleBeachChange}
           />
         <img
